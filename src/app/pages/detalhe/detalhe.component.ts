@@ -28,8 +28,8 @@ export class DetalheComponent implements OnInit {
   selected: string = 'id';
   
   opts: Opts[] = [
-    {value: 'title', viewValue: 'Título'},
     {value: 'id', viewValue: 'ID'},
+    {value: 'title', viewValue: 'Título'},
     {value: 'url', viewValue: 'Nome Cor'},
   ];
 
