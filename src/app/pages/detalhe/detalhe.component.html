@@ -1,0 +1,26 @@
+<h1 class="mt-5 ms-5">Album {{ albumId }} </h1>
+
+<div *ngIf="carregando == false">
+    <form class="ms-5 mb-5">
+        <mat-form-field appearance="fill">
+            <mat-label>Ordenar por</mat-label>
+            <mat-select [(ngModel)]="selected" name="food" (selectionChange)="ordenacao($event.value)">
+                <mat-option *ngFor="let opt of opts" [value]="opt.value">
+                    {{opt.viewValue}}
+                </mat-option>
+            </mat-select>
+        </mat-form-field>
+    </form>
+    <div class="row m-2">
+        <div class="col p-0 m-0" *ngFor="let album of albuns">
+            <img src="{{album.thumbnailUrl}}" alt="{{album.title}}" 
+                 title="{{album.title}}" 
+                 (click)="openDialog(album)"
+                 class="imagem border rounded">
+            <div class="d-inline-block text-truncate mb-0 px-2 " style="max-width: 150px;"><small>{{album.title}}</small></div>
+        </div>
+    </div>
+</div>
+<div *ngIf="carregando == true" class="w-100 centro m-5">
+    <mat-spinner></mat-spinner>
+</div>

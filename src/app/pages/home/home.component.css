@@ -1,0 +1,19 @@
+.example-card {
+    width: 200px;
+    height: 150px;
+    text-align: center;
+    vertical-align: auto;
+    margin-bottom: 10px;
+    text-decoration: none;
+    background-image: linear-gradient(45deg, rgba(252, 250, 250, 0.356), rgba(119, 33, 156, 0.237));
+}
+
+.example-card-content{
+    cursor: pointer; 
+    
+}
+
+.centro{
+    display: flex;
+    justify-content: center;
+}

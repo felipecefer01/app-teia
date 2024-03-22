@@ -1,0 +1,8 @@
+.imagem {
+    cursor: pointer;
+}
+
+.centro{
+    display: flex;
+    justify-content: center;
+}
